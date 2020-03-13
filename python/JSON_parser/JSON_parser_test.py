@@ -5,9 +5,15 @@ class JsonParserTest(unittest.TestCase):
 
     def test_jsonparser_1(self):
         link = 'https://jsonplaceholder.typicode.com/todos'
+<<<<<<< HEAD
         userId = 2
         completed = 1
         completedlist = [
+=======
+        index = 1
+        resultlist =[
+        2,
+>>>>>>> Solution commit corrected python tasks
         {'userId': 2, 'id': 22, 'title': 'distinctio vitae autem nihil ut molestias quo', 'completed': True},
         {'userId': 2, 'id': 25, 'title': 'voluptas quo tenetur perspiciatis explicabo natus', 'completed': True},
         {'userId': 2, 'id': 26, 'title': 'aliquam aut quasi', 'completed': True},
@@ -15,6 +21,7 @@ class JsonParserTest(unittest.TestCase):
         {'userId': 2, 'id': 30, 'title': 'nemo perspiciatis repellat ut dolor libero commodi blanditiis omnis', 'completed': True},
         {'userId': 2, 'id': 35, 'title': 'repellendus veritatis molestias dicta incidunt', 'completed': True},
         {'userId': 2, 'id': 36, 'title': 'excepturi deleniti adipisci voluptatem et neque optio illum ad', 'completed': True},
+<<<<<<< HEAD
         {'userId': 2, 'id': 40, 'title': 'totam atque quo nesciunt', 'completed': True}
         ]
 
@@ -39,6 +46,23 @@ class JsonParserTest(unittest.TestCase):
         ]
 
         self.assertEqual(getToDoList(link,userId,completed), notcompletedlist)
+=======
+        {'userId': 2, 'id': 40, 'title': 'totam atque quo nesciunt', 'completed': True}, {'userId': 2, 'id': 21, 'title': 'suscipit repellat esse quibusdam voluptatem incidunt', 'completed': False},
+        {'userId': 2, 'id': 23, 'title': 'et itaque necessitatibus maxime molestiae qui quas velit', 'completed': False},
+        {'userId': 2, 'id': 24, 'title': 'adipisci non ad dicta qui amet quaerat doloribus ea', 'completed': False},
+        {'userId': 2, 'id': 28, 'title': 'nesciunt totam sit blanditiis sit', 'completed': False},
+        {'userId': 2, 'id': 29, 'title': 'laborum aut in quam', 'completed': False},
+        {'userId': 2, 'id': 31, 'title': 'repudiandae totam in est sint facere fuga', 'completed': False},
+        {'userId': 2, 'id': 32, 'title': 'earum doloribus ea doloremque quis', 'completed': False},
+        {'userId': 2, 'id': 33, 'title': 'sint sit aut vero', 'completed': False},
+        {'userId': 2, 'id': 34, 'title': 'porro aut necessitatibus eaque distinctio', 'completed': False},
+        {'userId': 2, 'id': 37, 'title': 'sunt cum tempora', 'completed': False},
+        {'userId': 2, 'id': 38, 'title': 'totam quia non', 'completed': False},
+        {'userId': 2, 'id': 39, 'title': 'doloremque quibusdam asperiores libero corrupti illum qui omnis', 'completed': False}
+        ]
+
+        self.assertEqual(getToDoList(link)[index], resultlist)
+>>>>>>> Solution commit corrected python tasks
 
 if __name__ == "__main__":
     unittest.main()

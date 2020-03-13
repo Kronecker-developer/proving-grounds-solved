@@ -9,6 +9,7 @@ class ToDo:
         self.userid = userid
         self.completedlist = []
         self.notcompletedlist = []
+<<<<<<< HEAD
     def printCompletedList(self):
         print("User: "+str(self.userid))
         print("Completed:")
@@ -24,6 +25,8 @@ class ToDo:
         print("Completed: "+str(self.completedtotal))
         print("Not completed: "+str(self.notcompletedtotal))
         print("\n")
+=======
+>>>>>>> Solution commit corrected python tasks
 
     def getCompletedList(self):
         return self.completedlist
@@ -55,6 +58,7 @@ def createUsersToDoList(link):
                         userstodo.completedlist.append(item)
         return userstodolist
 
+<<<<<<< HEAD
 def getUsersToDoCompletedListByUserId(userstodolist,userId):
     for userstodo in userstodolist:
         if userstodo.userid == userId:
@@ -86,5 +90,24 @@ def getToDoList(link,userId,completed):
         return getCompletedList(link,userId)
     else:
         return getNotCompletedList(link,userId)
+=======
+def getToDoListByUser(link,userId):
+    userstodolist = createUsersToDoList(link)
+    for userstodo in userstodolist:
+        if userstodo.userid == userId:
+            return [userstodo.userid]+userstodo.getCompletedList()+userstodo.getNotCompletedList()
+
+def getToDoList(link):
+    resultlist = []
+    userstodolist = createUsersToDoList(link)
+    for userstodo in userstodolist:
+        resultlist+= [getToDoListByUser(link,userstodo.userid)]
+    return resultlist
+
+link = 'https://jsonplaceholder.typicode.com/todos'
+userId = 2
+
+
+>>>>>>> Solution commit corrected python tasks
 
 

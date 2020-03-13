@@ -1,0 +1,15 @@
+- job:
+    name: bazel-test
+    parent: base
+    description: |
+      Test zuul job
+    pre-run:
+      playbooks/make-log-dir.yaml
+    run:
+      playbooks/build-and-test.yaml
+    post-run:
+      playbooks/parse-log.yaml
+    vars:
+     log_dir_path: "/root/logs"
+     log_file_path: "{{ log_dir_path }}/bazel_log.txt"
+     src_build_path: "/root/src/gerrit/proving-grounds"

@@ -1,0 +1,7 @@
+- hosts: all
+  tasks:
+    - name: Log file parsing
+      shell: python3 log_parse_script.py "{{ log_file_path }}"
+      args:
+        chdir: "{{ src_build_path }}/playbooks/"
+

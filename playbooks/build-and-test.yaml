@@ -1,0 +1,9 @@
+- hosts: all
+  tasks:
+    - name: Bazel build and test
+      shell: |
+        bazel build //... &&
+        bazel test //... 2>&1 | tee "{{ log_file_path }}"
+      args:
+        chdir: "{{ src_build_path }}"
+

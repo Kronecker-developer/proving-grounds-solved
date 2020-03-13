@@ -1,0 +1,6 @@
+- hosts: all
+  tasks:
+    - name: Make log directory
+      shell: mkdir -p "{{ log_dir_path }}"
+
+

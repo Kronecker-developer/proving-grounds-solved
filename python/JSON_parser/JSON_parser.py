@@ -52,8 +52,3 @@ def getToDoList(link):
     for userstodo in userstodolist:
         resultlist+= [getToDoListByUser(link,userstodo.userid)]
     return resultlist
-
-link = 'https://jsonplaceholder.typicode.com/todos'
-userId = 2
-
-

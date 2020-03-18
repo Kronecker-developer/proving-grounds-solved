@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import itertools
-
-def permute(inputlist):
-    templist = list(itertools.permutations(inputlist))
-    resultlist = [list(l) for l in templist]
-    return resultlist
-=======
 class Permutation:
     resultlist = list()
     intlist = list()
@@ -50,4 +42,3 @@ def permute(intlist):
     return CreatePermutationNestedList(permutation.intlist,permutation.resultlist)
 
 resultlist = []
->>>>>>> Solution commit corrected python tasks

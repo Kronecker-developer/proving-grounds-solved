@@ -9,24 +9,6 @@ class ToDo:
         self.userid = userid
         self.completedlist = []
         self.notcompletedlist = []
-<<<<<<< HEAD
-    def printCompletedList(self):
-        print("User: "+str(self.userid))
-        print("Completed:")
-        print(self.completedlist)
-        print("\n")
-    def printNotCompletedList(self):
-        print("User: "+str(self.userid))
-        print("Not completed:")
-        print(self.notcompletedlist)
-        print("\n")
-    def printTotalCounts(self):
-        print("User: "+str(self.userid))
-        print("Completed: "+str(self.completedtotal))
-        print("Not completed: "+str(self.notcompletedtotal))
-        print("\n")
-=======
->>>>>>> Solution commit corrected python tasks
 
     def getCompletedList(self):
         return self.completedlist
@@ -58,39 +40,6 @@ def createUsersToDoList(link):
                         userstodo.completedlist.append(item)
         return userstodolist
 
-<<<<<<< HEAD
-def getUsersToDoCompletedListByUserId(userstodolist,userId):
-    for userstodo in userstodolist:
-        if userstodo.userid == userId:
-            return userstodo.getCompletedList()
-
-def getUsersToDoNotCompletedListByUserId(userstodolist,userId):
-    for userstodo in userstodolist:
-        if userstodo.userid == userId:
-            return userstodo.getNotCompletedList()
-
-def getCountCompletedByUserId(userstodolist,userId):
-    for userstodo in userstodolist:
-        if userstodo.userid == userId:
-            return userstodo.getCountCompleted()
-
-def getCountNotCompletedByUserId(userstodolist,userId):
-    for userstodo in userstodolist:
-        if userstodo.userid == userId:
-            return userstodo.getCountNotCompleted()
-
-def getCompletedList(link,userId):
-    return getUsersToDoCompletedListByUserId(createUsersToDoList(link),userId)
-
-def getNotCompletedList(link,userId):
-    return getUsersToDoNotCompletedListByUserId(createUsersToDoList(link),userId)
-
-def getToDoList(link,userId,completed):
-    if completed:
-        return getCompletedList(link,userId)
-    else:
-        return getNotCompletedList(link,userId)
-=======
 def getToDoListByUser(link,userId):
     userstodolist = createUsersToDoList(link)
     for userstodo in userstodolist:
@@ -106,8 +55,5 @@ def getToDoList(link):
 
 link = 'https://jsonplaceholder.typicode.com/todos'
 userId = 2
-
-
->>>>>>> Solution commit corrected python tasks
 
 
